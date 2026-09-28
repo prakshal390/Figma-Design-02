@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #111111;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* ============================= */
+/* FORM INPUT */
+/* ============================= */
+
+.input-style {
+  width: 100%;
+  height: 46px;
+
+  border: 1px solid #d5d5d5;
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  padding: 0 13px;
+
+  font-size: 12px;
+  color: #333333;
+
+  outline: none;
+
+  transition: all 0.2s ease;
+}
+
+.input-style::placeholder {
+  color: #999999;
+}
+
+.input-style:hover {
+  border-color: #bdbdbd;
+}
+
+.input-style:focus {
+  border-color: #ff6900;
+
+  box-shadow: 0 0 0 3px rgba(255, 105, 0, 0.08);
+}
+
+
+/* ============================= */
+/* SELECT ARROW */
+/* ============================= */
+
+select {
+  cursor: pointer;
+}
+
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
+
+
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width: 640px) {
+
+  .input-style {
+    height: 44px;
+    font-size: 12px;
+  }
+
+}
