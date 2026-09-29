@@ -1,147 +1,80 @@
-
-
-
-
-
 import { useState } from "react";
-import {
-  Menu,
-  X,
-  MessageCircle,
-} from "lucide-react";
+import { MessageCircle } from "lucide-react";
+import "./Navbar.css";
 
-function Navbar() {
-  const [mobileMenu, setMobileMenu] = useState(false);
+export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const navItems = [
-    {
-      name: "Packages",
-      link: "#packages",
-    },
-    {
-      name: "Why Zinigo",
-      link: "#why-zinigo",
-    },
-    {
-      name: "What's Included",
-      link: "#included",
-    },
-    {
-      name: "Customize Your Trip",
-      link: "#customize",
-    },
-    {
-      name: "Reviews",
-      link: "#testimonials",
-    },
-    {
-      name: "FAQ",
-      link: "#faq",
-    },
-  ];
+  const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+    });
+
+    setMenuOpen(false);
+  };
 
   return (
-    <header className="relative z-50 w-full bg-white">
-      <div className="mx-auto flex h-[64px] max-w-[1180px] items-center justify-between px-5 lg:px-0">
+    <header className="navbar">
+      <div className="navbar-inner">
 
         {/* Logo */}
-        <a
-          href="#home"
-          className="flex items-center"
+        <button
+          className="logo"
+          onClick={() => scrollToSection("home")}
         >
-          <span className="text-[22px] font-medium tracking-[-1px] text-[#ff6b00]">
-            ◉zinigo.
-          </span>
-        </a>
+          <span>◉</span>
+          zinigo
+          <b>.</b>
+        </button>
 
-        {/* Desktop Menu */}
-        <nav className="hidden items-center gap-[30px] lg:flex">
-          {navItems.map((item) => (
-            <a
-              key={item.name}
-              href={item.link}
-              className="whitespace-nowrap text-[11px] font-medium text-[#222] transition hover:text-[#ff6900]"
-            >
-              {item.name}
-            </a>
-          ))}
+        {/* Desktop Navigation */}
+        <nav className={`nav-menu ${menuOpen ? "show" : ""}`}>
+          <button onClick={() => scrollToSection("packages")}>
+            Packages
+          </button>
+
+          <button onClick={() => scrollToSection("why-zinigo")}>
+            Why ZiniGo
+          </button>
+
+          <button onClick={() => scrollToSection("included")}>
+            What's Included
+          </button>
         </nav>
 
         {/* Right Buttons */}
-        <div className="hidden items-center gap-[8px] lg:flex">
+        <div className="nav-actions">
 
           <a
-            href="#whatsapp"
-            className="flex h-[30px] items-center gap-[5px] rounded-[4px] border border-[#18b83f] px-[13px] text-[11px] font-semibold text-[#159b35] transition hover:bg-[#effff3]"
+            href="https://wa.me/919876500000"
+            target="_blank"
+            rel="noreferrer"
+            className="whatsapp-btn"
           >
-            <MessageCircle size={13} />
+            <MessageCircle size={15} />
             WhatsApp us
           </a>
 
-          <a
-            href="#customize"
-            className="flex h-[30px] items-center rounded-[4px] bg-[#ff6900] px-[17px] text-[11px] font-semibold text-white transition hover:bg-[#e85e00]"
+          <button
+            className="quote-btn"
+            onClick={() => scrollToSection("customize")}
           >
             Get free Quote
-          </a>
+          </button>
 
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu */}
         <button
-          onClick={() => setMobileMenu(!mobileMenu)}
-          className="rounded-md p-2 lg:hidden"
+          className="hamburger"
+          onClick={() => setMenuOpen(!menuOpen)}
         >
-          {mobileMenu ? (
-            <X size={24} />
-          ) : (
-            <Menu size={24} />
-          )}
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
+
       </div>
-
-      {/* Mobile Menu */}
-      {mobileMenu && (
-        <div className="border-t border-gray-100 bg-white px-5 py-5 shadow-md lg:hidden">
-
-          <nav className="flex flex-col">
-
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.link}
-                onClick={() => setMobileMenu(false)}
-                className="border-b border-gray-100 py-3 text-sm font-medium text-gray-700"
-              >
-                {item.name}
-              </a>
-            ))}
-
-            <div className="mt-4 flex flex-col gap-2">
-
-              <a
-                href="#whatsapp"
-                className="flex items-center justify-center gap-2 rounded-md border border-green-500 py-3 text-sm font-semibold text-green-600"
-              >
-                <MessageCircle size={16} />
-                WhatsApp us
-              </a>
-
-              <a
-                href="#customize"
-                className="rounded-md bg-[#ff6900] py-3 text-center text-sm font-semibold text-white"
-              >
-                Get free Quote
-              </a>
-
-            </div>
-
-          </nav>
-
-        </div>
-      )}
     </header>
   );
 }
-
-export default Navbar;
