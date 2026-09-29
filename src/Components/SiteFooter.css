@@ -1,0 +1,628 @@
+/* =========================================================
+   ZINIGO FOOTER
+========================================================= */
+
+.site-footer {
+  width: 100%;
+
+  /* White gap between CTA and footer */
+  margin-top: 55px;
+
+  background: #292929;
+
+  color: #ffffff;
+
+  padding: 70px 0 25px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.site-footer-container {
+  width: 100%;
+
+  max-width: 1310px;
+
+  margin: 0 auto;
+
+  padding: 0 40px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   FOOTER MAIN
+========================================================= */
+
+.site-footer-main {
+  width: 100%;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  padding-bottom: 70px;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.site-footer-brand {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.site-footer-logo {
+  display: flex;
+
+  align-items: center;
+
+  margin-bottom: 32px;
+
+  color: #ffffff;
+
+  font-size: 46px;
+
+  line-height: 1;
+
+  font-weight: 400;
+
+  letter-spacing: -1.5px;
+}
+
+
+.site-footer-logo-symbol {
+  width: 38px;
+
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-right: 10px;
+
+  font-size: 37px;
+
+  line-height: 1;
+}
+
+
+.site-footer-logo-text {
+  color: #ffffff;
+}
+
+
+.site-footer-logo-dot {
+  color: #ffffff;
+}
+
+
+.site-footer-logo sup {
+  position: relative;
+
+  top: -12px;
+
+  margin-left: 3px;
+
+  color: #ffffff;
+
+  font-size: 10px;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   BRAND DESCRIPTION
+========================================================= */
+
+.site-footer-brand p {
+  width: 100%;
+
+  max-width: 575px;
+
+  margin: 0;
+
+  color: #f0f0f0;
+
+  font-size: 17px;
+
+  line-height: 1.45;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   FOLLOW US
+========================================================= */
+
+.site-footer-social {
+  width: 420px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  margin-top: 25px;
+}
+
+
+/* Follow Us heading */
+
+.site-footer-social h3 {
+  margin: 0 0 30px 0;
+
+  color: #ffffff;
+
+  font-size: 26px;
+
+  line-height: 1.2;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   SOCIAL ICONS
+========================================================= */
+
+.site-footer-social-icons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 42px;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+
+.site-footer-social-icons a {
+  width: 32px;
+
+  height: 32px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+
+.site-footer-social-icons a:hover {
+  transform: translateY(-3px);
+
+  opacity: 0.8;
+}
+
+
+/* =========================================================
+   INSTAGRAM
+========================================================= */
+
+.instagram-icon {
+  color: #e1306c;
+}
+
+
+.instagram-icon i {
+  font-size: 27px;
+}
+
+
+/* =========================================================
+   FACEBOOK
+========================================================= */
+
+.facebook-icon {
+  color: #1877f2;
+}
+
+
+.facebook-icon i {
+  font-size: 27px;
+}
+
+
+/* =========================================================
+   YOUTUBE
+========================================================= */
+
+.youtube-icon {
+  color: #ff0000;
+}
+
+
+.youtube-icon i {
+  font-size: 27px;
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.site-footer-bottom {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding-top: 25px;
+
+  border-top: 1px solid #555555;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   COPYRIGHT
+========================================================= */
+
+.site-footer-copyright {
+  color: #eeeeee;
+
+  font-size: 15px;
+
+  line-height: 1.4;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   FOOTER LINKS
+========================================================= */
+
+.site-footer-links {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 45px;
+}
+
+
+.site-footer-links a {
+  color: #eeeeee;
+
+  font-size: 15px;
+
+  line-height: 1.4;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition: color 0.2s ease;
+}
+
+
+.site-footer-links a:hover {
+  color: #ff6500;
+}
+
+
+/* =========================================================
+   LARGE LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .site-footer-container {
+    padding: 0 35px;
+  }
+
+  .site-footer-brand p {
+    max-width: 500px;
+  }
+
+  .site-footer-social {
+    width: 350px;
+  }
+
+  .site-footer-links {
+    gap: 30px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .site-footer {
+    margin-top: 45px;
+
+    padding: 55px 0 25px;
+  }
+
+
+  .site-footer-container {
+    padding: 0 30px;
+  }
+
+
+  .site-footer-main {
+    padding-bottom: 50px;
+  }
+
+
+  .site-footer-logo {
+    font-size: 38px;
+
+    margin-bottom: 25px;
+  }
+
+
+  .site-footer-logo-symbol {
+    width: 32px;
+
+    height: 32px;
+
+    font-size: 31px;
+  }
+
+
+  .site-footer-brand p {
+    max-width: 420px;
+
+    font-size: 15px;
+  }
+
+
+  .site-footer-social {
+    width: 280px;
+
+    margin-top: 15px;
+  }
+
+
+  .site-footer-social h3 {
+    font-size: 23px;
+
+    margin-bottom: 25px;
+  }
+
+
+  .site-footer-social-icons {
+    gap: 30px;
+  }
+
+
+  .site-footer-bottom {
+    align-items: flex-start;
+
+    gap: 25px;
+  }
+
+
+  .site-footer-links {
+    gap: 22px;
+
+    flex-wrap: wrap;
+  }
+
+
+  .site-footer-links a,
+  .site-footer-copyright {
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .site-footer {
+    margin-top: 35px;
+
+    padding: 45px 0 25px;
+  }
+
+
+  .site-footer-container {
+    padding: 0 22px;
+  }
+
+
+  .site-footer-main {
+    flex-direction: column;
+
+    gap: 45px;
+
+    padding-bottom: 40px;
+  }
+
+
+  /* Logo */
+
+  .site-footer-logo {
+    font-size: 34px;
+
+    margin-bottom: 22px;
+  }
+
+
+  .site-footer-logo-symbol {
+    width: 29px;
+
+    height: 29px;
+
+    margin-right: 7px;
+
+    font-size: 28px;
+  }
+
+
+  .site-footer-logo sup {
+    top: -9px;
+
+    font-size: 8px;
+  }
+
+
+  /* Description */
+
+  .site-footer-brand p {
+    max-width: 100%;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+  }
+
+
+  /* Social */
+
+  .site-footer-social {
+    width: 100%;
+
+    margin-top: 0;
+  }
+
+
+  .site-footer-social h3 {
+    font-size: 22px;
+
+    margin-bottom: 20px;
+  }
+
+
+  .site-footer-social-icons {
+    gap: 28px;
+  }
+
+
+  .site-footer-social-icons a {
+    width: 30px;
+
+    height: 30px;
+  }
+
+
+  .instagram-icon i,
+  .facebook-icon i,
+  .youtube-icon i {
+    font-size: 24px;
+  }
+
+
+  /* Bottom */
+
+  .site-footer-bottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    padding-top: 20px;
+  }
+
+
+  .site-footer-copyright {
+    font-size: 12px;
+
+    white-space: normal;
+  }
+
+
+  .site-footer-links {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+
+  .site-footer-links a {
+    font-size: 12px;
+
+    white-space: normal;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .site-footer-container {
+    padding: 0 18px;
+  }
+
+
+  .site-footer-logo {
+    font-size: 30px;
+  }
+
+
+  .site-footer-brand p {
+    font-size: 13px;
+  }
+
+
+  .site-footer-social h3 {
+    font-size: 20px;
+  }
+
+
+  .site-footer-social-icons {
+    gap: 24px;
+  }
+
+}
